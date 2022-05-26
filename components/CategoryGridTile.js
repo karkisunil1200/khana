@@ -2,10 +2,11 @@ import { StyleSheet, Text, View, Pressable, Platform } from "react-native";
 import React from "react";
 import { shadowOffset } from "react-native/Libraries/Components/View/ReactNativeStyleAttributes";
 
-const CategoryGridTile = ({ title, color }) => {
+const CategoryGridTile = ({ title, color, onPress }) => {
   return (
     <View style={styles.gridItem}>
       <Pressable
+        onPress={onPress}
         android_ripple={{ color: "#ccc" }}
         style={({ pressed }) => [
           styles.button,
